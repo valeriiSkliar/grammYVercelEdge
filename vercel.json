@@ -1,4 +1,16 @@
 {
   "installCommand": "npm i --omit=dev",
-  "buildCommand": "node scripts/build.mjs"
+  "buildCommand": "node scripts/build.mjs",
+    "version": 2,
+  "functions": {
+    "api/update.mjs": {
+      "runtime": "edge"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/update",
+      "dest": "/api/update.mjs"
+    }
+  ]
 }
